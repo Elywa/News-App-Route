@@ -1,5 +1,3 @@
-
-
 class Source {
   String? id;
   String? name;
@@ -19,7 +17,7 @@ class Source {
     this.country,
   });
 
-  factory Source.fromMap(Map<String, dynamic> data) => Source(
+  factory Source.fromJson(Map<String, dynamic> data) => Source(
         id: data['id'] as String?,
         name: data['name'] as String?,
         description: data['description'] as String?,
@@ -38,16 +36,4 @@ class Source {
         'language': language,
         'country': country,
       };
-
-  /// `dart:convert`
-  ///
-  /// Parses the string and returns the resulting Json object as [Source].
-  // factory Source.fromJson(String data) {
-  //   return Source.fromMap(json.decode(data) as Map<String, dynamic>);
-  // }
-
-  // /// `dart:convert`
-  // ///
-  // /// Converts [Source] to a JSON string.
-  // String toJson() => json.encode(toMap());
 }

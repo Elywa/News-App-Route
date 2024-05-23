@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:news_app/Home/tab_item.dart';
 import 'package:news_app/Home/tabs_widget.dart';
 import 'package:news_app/api/api_manager.dart';
-import 'package:news_app/models/resource_response/resource_response.dart';
+import 'package:news_app/models/source_response/resource_response.dart';
 
 import 'package:news_app/theme.dart';
 

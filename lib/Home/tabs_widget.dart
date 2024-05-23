@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:news_app/Home/tab_item.dart';
-import 'package:news_app/models/resource_response/source.dart';
+import 'package:news_app/models/source_response/source.dart';
 
 class TabsWidget extends StatefulWidget {
   TabsWidget({super.key, required this.sources});

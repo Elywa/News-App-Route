@@ -15,7 +15,7 @@ class SourceResponse {
       message: data['message'] as String?,
       status: data['status'] as String?,
       sources: (data['sources'] as List<dynamic>?)
-          ?.map((e) => Source.fromMap(e as Map<String, dynamic>))
+          ?.map((e) => Source.fromJson(e as Map<String, dynamic>))
           .toList(),
     );
   }

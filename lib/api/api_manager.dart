@@ -3,7 +3,7 @@ import 'dart:convert';
 import 'package:http/http.dart' as http;
 import 'package:http/http.dart';
 import 'package:news_app/constants.dart';
-import 'package:news_app/models/resource_response/resource_response.dart';
+import 'package:news_app/models/source_response/resource_response.dart';
 
 class ApiManager {
   //https://newsapi.org/v2/top-headlines/sources?apiKey=85d5590c8e9e49c8aaa2e1d995aab8d3

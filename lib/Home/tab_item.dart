@@ -20,14 +20,16 @@ class TabItem extends StatelessWidget {
         borderRadius: BorderRadius.circular(16),
         color: isSelected ? MyTheme.primaryColor : Colors.transparent,
       ),
-      child: Text(
-        textAlign: TextAlign.center,
-        name ?? 'UnKnown',
-        style: Theme.of(context).textTheme.titleMedium!.copyWith(
-              color: isSelected ? MyTheme.whiteColor : MyTheme.primaryColor,
-              fontSize: 20,
-              fontWeight: FontWeight.bold,
-            ),
+      child: Center(
+        child: Text(
+          textAlign: TextAlign.center,
+          name ?? 'UnKnown',
+          style: Theme.of(context).textTheme.titleMedium!.copyWith(
+                color: isSelected ? MyTheme.whiteColor : MyTheme.primaryColor,
+                fontSize: 20,
+                fontWeight: FontWeight.bold,
+              ),
+        ),
       ),
     );
   }
