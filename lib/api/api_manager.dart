@@ -26,4 +26,9 @@ class ApiManager {
       throw e;
     }
   }
+
+
+  static void getSourceNews(String sourceName) {
+    
+  }
 }
