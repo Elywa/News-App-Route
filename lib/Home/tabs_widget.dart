@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:news_app/Home/news_widget.dart';
 import 'package:news_app/Home/tab_item.dart';
 import 'package:news_app/models/source_response/source.dart';
 
@@ -35,6 +36,7 @@ class _TabsWidgetState extends State<TabsWidget> {
                       ),
                     )
                     .toList()),
+            NewsView(source: widget.sources[selctedIndex])
           ],
         ));
   }

@@ -50,23 +50,28 @@ class _HomeViewState extends State<HomeView> {
                 );
               } else if (snapShot.hasError) {
                 return Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Text(
-                      'Something went wrong',
-                      style: Theme.of(context)!.textTheme.titleMedium,
+                    Center(
+                      child: Text(
+                        'Something went wrong',
+                        style: Theme.of(context).textTheme.titleMedium,
+                      ),
                     ),
                     SizedBox(
                       height: 15,
                     ),
-                    IconButton(
-                      onPressed: () {
-                        ApiManager.getSources();
-                        setState(() {});
-                      },
-                      icon: Icon(
-                        Icons.refresh,
-                        size: 35,
-                        color: MyTheme.primaryColor,
+                    Center(
+                      child: IconButton(
+                        onPressed: () {
+                          ApiManager.getSources();
+                          setState(() {});
+                        },
+                        icon: Icon(
+                          Icons.refresh,
+                          size: 35,
+                          color: MyTheme.primaryColor,
+                        ),
                       ),
                     )
                   ],
@@ -75,7 +80,7 @@ class _HomeViewState extends State<HomeView> {
                 return Center(
                   child: Text(
                     snapShot.data?.message ?? 'Server error',
-                    style: Theme.of(context)!.textTheme.titleMedium,
+                    style: Theme.of(context).textTheme.titleMedium,
                   ),
                 );
               }
