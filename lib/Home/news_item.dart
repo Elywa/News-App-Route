@@ -9,31 +9,33 @@ class ArticleItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: double.infinity,
-      padding: EdgeInsets.symmetric(horizontal: 5),
-      height: MediaQuery.of(context).size.height * .45,
+      // width: double.infinity,
+      // padding: EdgeInsets.symmetric(horizontal: 5),
+      // height: MediaQuery.of(context).size.height * .45,
       margin: EdgeInsets.symmetric(vertical: 10, horizontal: 8),
       decoration: BoxDecoration(
         border: Border.all(width: 1, color: MyTheme.primaryColor),
+        borderRadius: BorderRadius.circular(16),
       ),
       child: Column(
         children: [
+          // كان ممكن نستخدم ClipRRect بدل Container
+          Container(
+            //clipBehavior: Clip.antiAlias, => نستخدم السطر ده لو خلينا الصورة كطفل للكونتيرنر عشان يتعملها بوردر راديس
+            decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(16),
+                image: DecorationImage(
+                  image: NetworkImage(article.urlToImage ?? ''),
+                  fit: BoxFit.fill,
+                )),
+            width: double.infinity,
+            height: MediaQuery.of(context).size.height * .33,
+          ),
           SizedBox(
             height: 3,
           ),
-          Container(
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(16),
-            ),
-            width: double.infinity,
-            height: MediaQuery.of(context).size.height * .33,
-            child: Image(
-              image: NetworkImage(article.urlToImage ?? ''),
-              fit: BoxFit.fill,
-            ),
-          ),
           Padding(
-            padding: const EdgeInsets.symmetric(vertical: 2),
+            padding: const EdgeInsets.only(top: 2, right: 2, left: 2),
             child: Text(
               article.title ?? 'Unknown',
               overflow: TextOverflow.ellipsis,
@@ -44,12 +46,18 @@ class ArticleItem extends StatelessWidget {
               maxLines: 1,
             ),
           ),
-          Text(
-            overflow: TextOverflow.ellipsis,
-            maxLines: 2,
-            textAlign: TextAlign.start,
-            article.description ?? 'Unknown',
-            style: Theme.of(context).textTheme.titleSmall,
+          SizedBox(
+            height: 3,
+          ),
+          Padding(
+            padding: const EdgeInsets.only(top: 2, right: 2, left: 2),
+            child: Text(
+              overflow: TextOverflow.ellipsis,
+              maxLines: 2,
+              textAlign: TextAlign.start,
+              article.description ?? 'Unknown',
+              style: Theme.of(context).textTheme.titleSmall,
+            ),
           ),
         ],
       ),

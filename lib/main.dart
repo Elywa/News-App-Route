@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:news_app/Home/home_view.dart';
+import 'package:news_app/category/category_view.dart';
 import 'package:news_app/theme.dart';
 
 void main() async {
@@ -17,10 +18,11 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      initialRoute: HomeView.routeName,
+      initialRoute: CategoryView.routeName,
       theme: MyTheme.lightTheme,
       routes: {
         HomeView.routeName: (context) => const HomeView(),
+        CategoryView.routeName: (context) => CategoryView(),
       },
     );
   }

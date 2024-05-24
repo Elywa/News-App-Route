@@ -6,9 +6,9 @@ import 'package:news_app/models/source_response/source.dart';
 import 'package:news_app/theme.dart';
 
 class NewsView extends StatefulWidget {
-  NewsView({super.key, required this.source});
+  NewsView({super.key, required this.source });
   Source source;
-
+ 
   @override
   State<NewsView> createState() => _NewsViewState();
 }

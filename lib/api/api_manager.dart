@@ -13,7 +13,9 @@ class ApiManager {
     Uri url = Uri.https(
       domain,
       getSourcesEndPoint,
-      {'apiKey': '85d5590c8e9e49c8aaa2e1d995aab8d3'},
+      {'apiKey': '85d5590c8e9e49c8aaa2e1d995aab8d3',
+        
+      },
     );
 
     try {

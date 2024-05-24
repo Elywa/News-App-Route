@@ -1,4 +1,5 @@
 import 'dart:ffi';
+import 'dart:js';
 
 import 'package:flutter/material.dart';
 import 'package:news_app/Home/tab_item.dart';
@@ -19,6 +20,7 @@ class HomeView extends StatefulWidget {
 class _HomeViewState extends State<HomeView> {
   @override
   Widget build(BuildContext context) {
+   // var category = ModalRoute.of(context)!.settings.arguments as String;
     return Stack(
       children: [
         Container(
