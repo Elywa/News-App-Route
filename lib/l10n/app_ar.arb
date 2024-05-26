@@ -1,0 +1,19 @@
+{
+    "news_app" : "تطبيق الأخبار" , 
+    "categories" : "الأقسام" , 
+    "settings" : "الإعدادات" , 
+    "pick_your_categories_of_interest" : "إختر القسم الذى تهتم به" , 
+    "sports" : "الرياضه" , 
+    "bussiness" : "ريادة الاعمال" , 
+    "entertainment" : "الترفيه" , 
+    "general":"عـــام" , 
+    "health" : "الصحـه" , 
+    "science" : "العلــوم" , 
+    "technology" : "التكنولوجيـا" , 
+    "language" : "اللغـه" , 
+    "arabic" : "العربيـه" , 
+    "english" : "الإنجليزيـه",
+    "auther" : "الكاتب" , 
+    "view_full_article" : "الاطلاع على المقال"
+
+}

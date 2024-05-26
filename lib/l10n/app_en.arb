@@ -1,0 +1,20 @@
+{
+    "news_app" : "News App" , 
+    "categories" : "Categories" , 
+    "settings" : "Settings" , 
+    "pick_your_categories_of_interest" : "Pick Your Categories of interest" , 
+    "sports" : "Sports" , 
+    "bussiness" : "Bussiness" , 
+    "entertainment" : "Entertainment" , 
+    "general":"General" , 
+    "health" : "Health" , 
+    "science" : "Science" , 
+    "technology" : "Technology" , 
+    "language" : "Language" , 
+    "arabic" : "Arabic" , 
+    "english" : "English" , 
+    "auther" : "Auther" , 
+    "view_full_article" : "View Full Article"
+
+
+}

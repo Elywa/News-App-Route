@@ -1,6 +1,5 @@
 import 'dart:convert';
 
-import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:http/http.dart';
 import 'package:news_app/constants.dart';
@@ -9,12 +8,13 @@ import 'package:news_app/models/source_response/resource_response.dart';
 
 class ApiManager {
   //https://newsapi.org/v2/top-headlines/sources?apiKey=85d5590c8e9e49c8aaa2e1d995aab8d3
-  static Future<SourceResponse?> getSources() async {
+  static Future<SourceResponse?> getSources(String? categoryId) async {
     Uri url = Uri.https(
       domain,
       getSourcesEndPoint,
-      {'apiKey': '85d5590c8e9e49c8aaa2e1d995aab8d3',
-        
+      {
+        'apiKey': '85d5590c8e9e49c8aaa2e1d995aab8d3',
+        'category': categoryId,
       },
     );
 
