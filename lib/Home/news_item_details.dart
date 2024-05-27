@@ -1,14 +1,23 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
+
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:intl/intl.dart';
+import 'package:news_app/Home/web_view_controller.dart';
+
 import 'package:news_app/models/articles/articles/article.dart';
 import 'package:news_app/theme.dart';
+import 'package:webview_flutter/webview_flutter.dart';
 
-class NewsItemDetails extends StatelessWidget {
-  const NewsItemDetails({super.key});
+class NewsItemDetails extends StatefulWidget {
+  NewsItemDetails({super.key});
   static const String routeName = 'NewsItemDetails';
+
+  @override
+  State<NewsItemDetails> createState() => _NewsItemDetailsState();
+}
+
+class _NewsItemDetailsState extends State<NewsItemDetails> {
   @override
   Widget build(BuildContext context) {
     var article = ModalRoute.of(context)!.settings.arguments as Article;
@@ -124,7 +133,12 @@ class NewsItemDetails extends StatelessWidget {
                           height: 30,
                         ),
                         GestureDetector(
-                          onTap: () {},
+                          onTap: () {
+                            Navigator.push(context,
+                                MaterialPageRoute(builder: (context) {
+                              return WebViewPage(article: article);
+                            }));
+                          },
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.end,
                             children: [
